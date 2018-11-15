@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-------- Incluir Bootstrap ----------->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<title></title>
+</head>
+<body>
+
+	<div class="container">
+		<h1>ng-model</h1>
+		<h4>En AngularJS</h4>
+		<hr>
+
+		<p>
+			Su nombre: {{nombre | uppercase}}
+			<br>
+			<input ng-model="nombre" type="text" class="form-control" placeholder="Introduce tu nombre">
+		</p>
+
+		<p>
+			Selecciona tu pueblo: {{ pueblo }}
+			<select class="form-control" ng-model="pueblo">
+				<option value="1">Daimiel</option>
+				<option value="2">Villarrubia de los Ojos</option>
+				<option value="3">Torralba de Calatrava</option>
+			</select>
+		</p>
+
+		<p>
+			Selecciona las opcines que desea: {{opt1}} {{opt2}} {{opt3}}
+			<br>
+			<input type="checkbox" ng-model="opt1">Opción 1
+			<br>
+			<input type="checkbox" ng-model="opt2">Opción 2
+			<br>
+			<input type="checkbox" ng-model="opt3">Opción 3
+		</p>
+
+		<p>
+			Selecciona qué tipo de luchador eres: {{tipoLuchador}}
+			<br>
+			<input type="radio" value="F" ng-model="tipoLuchador">Face
+			<br>
+			<input type="radio" value="H" ng-model="tipoLuchador">Heel
+			<br>
+			<input type="radio" value="T" ng-model="tipoLuchador">Tweener
+			<br>
+		</p>
+		
+
+<!------------ Incluir AngularJS ---------->
+<script type="text/javascript" src="js/lib/angular.min.js"></script>
+</body>
+</html>
